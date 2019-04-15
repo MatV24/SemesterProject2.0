@@ -1,0 +1,44 @@
+<p id="notice"><%= notice %></p>
+
+<h1>Faculties</h1>
+
+<table>
+  <thead>
+    <tr>
+      <th>Lastname</th>
+      <th>Firstname</th>
+      <th>Ttitle</th>
+      <th>Email</th>
+      <th>Phone</th>
+      <th colspan="3"></th>
+    </tr>
+  </thead>
+
+  <tbody>
+    <% @faculties.each do |faculty| %>
+      <tr>
+        <td><%= faculty.Lastname %></td>
+        <td><%= faculty.Firstname %></td>
+        <td><%= faculty.Title %></td>
+        <td><%= faculty.Email %></td>
+        <td><%= faculty.Phone %></td>
+        <td><%= link_to 'Show', faculty %></td>
+        <td><%= link_to 'Edit', edit_faculty_path(faculty) %></td>
+        <td><%= link_to 'Destroy', faculty, method: :delete, data: { confirm: 'Are you sure?' } %></td>
+      </tr>
+    <% end %>
+  </tbody>
+</table>
+
+<br>
+
+<h3>Import Data</h3>
+<%=form_tag import_faculties_path, multipart: true do %>
+  <%= file_field_tag :file %>
+  <%= submit_tag "import CSV" %>
+<%end %>
+
+<%= link_to 'CSV Upload format', "/FacultyTemplate2.csv", :target => "_blank" %>
+
+
+<%= link_to 'New Faculty', new_faculty_path %>

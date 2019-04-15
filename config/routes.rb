@@ -1,5 +1,6 @@
 Rails.application.routes.draw do
-  resources :criteria
+  resources :coursecriterions
+  resources :criterions
   resources :faculties do
     collection {post :import }
   end

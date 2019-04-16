@@ -7,5 +7,7 @@ class Course < ApplicationRecord
       Course.create! row.to_hash
 
     end
-    end
+  end
+
+
 end

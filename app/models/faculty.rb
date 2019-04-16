@@ -7,4 +7,6 @@ class Faculty < ApplicationRecord
 
     end
   end
+
+
 end

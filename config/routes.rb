@@ -1,4 +1,5 @@
 Rails.application.routes.draw do
+  resources :courseevaluations
   resources :coursefaculties
   resources :coursecriterions
   resources :criterions

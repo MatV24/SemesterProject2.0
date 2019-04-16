@@ -10,7 +10,7 @@
 #
 # It's strongly recommended that you check this file into your version control system.
 
-ActiveRecord::Schema.define(version: 2019_04_15_224643) do
+ActiveRecord::Schema.define(version: 2019_04_16_005523) do
 
   create_table "coursecriterions", force: :cascade do |t|
     t.integer "Exceed"
@@ -20,6 +20,18 @@ ActiveRecord::Schema.define(version: 2019_04_15_224643) do
     t.datetime "updated_at", null: false
     t.integer "course_id"
     t.integer "criterion_id"
+  end
+
+  create_table "courseevaluations", force: :cascade do |t|
+    t.integer "criteriathreshold"
+    t.integer "course_id"
+    t.integer "faculty_id"
+    t.integer "criterion_id"
+    t.datetime "created_at", null: false
+    t.datetime "updated_at", null: false
+    t.index ["course_id"], name: "index_courseevaluations_on_course_id"
+    t.index ["criterion_id"], name: "index_courseevaluations_on_criterion_id"
+    t.index ["faculty_id"], name: "index_courseevaluations_on_faculty_id"
   end
 
   create_table "coursefaculties", force: :cascade do |t|

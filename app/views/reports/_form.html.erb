@@ -1,0 +1,53 @@
+<%= form_with(model: report, local: true) do |form| %>
+  <% if report.errors.any? %>
+    <div id="error_explanation">
+      <h2><%= pluralize(report.errors.count, "error") %> prohibited this report from being saved:</h2>
+
+      <ul>
+      <% report.errors.full_messages.each do |message| %>
+        <li><%= message %></li>
+      <% end %>
+      </ul>
+    </div>
+  <% end %>
+
+  <div class="field">
+    <%= form.label :courseevaluation_id %>
+    <%= form.collection_select :courseevaluation_id, Faculty.all, :id, :full_name %>
+  </div>
+
+  <div class="field">
+    <%= form.label :Course_Number %>
+    <%= form.collection_select :courseevaluation_id, Course.all, :id, :Number %>
+  </div>
+
+  <div class="field">
+    <%= form.label :Citeria %>
+    <%= form.collection_select :courseevaluation_id, Criterion.all, :id, :Title %>
+  </div>
+
+  <div class="field">
+    <%= form.label :Criteria_threshold %>
+    <%= form.collection_select :courseevaluation_id, Courseevaluation.all, :id, :criteriathreshold %>
+  </div>
+
+  <div class="field">
+    <%= form.label :max %>
+    <%= form.number_field :max %>
+  </div>
+
+  <div class="field">
+    <%= form.label :min %>
+    <%= form.number_field :min %>
+  </div>
+
+  <div class="field">
+    <%= form.label :mean %>
+    <%= form.number_field :mean %>
+  </div>
+
+
+  <div class="actions">
+    <%= form.submit %>
+  </div>
+<% end %>

@@ -10,18 +10,21 @@
       </ul>
     </div>
   <% end %>
-
   <div class="form-group">
-    <%= form.label :Name %>
-    <%= form.text_field :Name %>
-  </div>
 
-  <div class="form-group">
-    <%= form.label :Number %>
-    <%= form.text_field :Number %>
-  </div>
+    <div>
+      <%= form.label :Name %>
+      <%= form.text_field :Name %>
+    </div>
 
-  <div class="actions">
-    <%= form.submit %>
+    <div>
+      <%= form.label :Number %>
+      <%= form.text_field :Number %>
+    </div>
+
+    <div class="actions, btn btn-default">
+      <%= form.submit %>
+    </div>
+
   </div>
 <% end %>

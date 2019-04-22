@@ -2,8 +2,8 @@
 
 <h1>Faculties</h1>
 
-<table>
-  <thead>
+<table class="table table-bordered table-sm">
+  <thead class="thead-dark">
     <tr>
       <th>Lastname</th>
       <th>Firstname</th>
@@ -28,6 +28,7 @@
       </tr>
     <% end %>
   </tbody>
+  <%= link_to 'New Faculty', new_faculty_path %>
 </table>
 
 <br>
@@ -41,4 +42,4 @@
 <%= link_to 'CSV Upload format', "/FacultyTemplate2.csv", :target => "_blank" %>
 
 
-<%= link_to 'New Faculty', new_faculty_path %>
+

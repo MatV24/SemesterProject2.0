@@ -8,5 +8,7 @@ class Faculty < ApplicationRecord
     end
   end
 
-
+  def full_name
+    "#{self.Lastname} #{self.Firstname}"
+  end
 end

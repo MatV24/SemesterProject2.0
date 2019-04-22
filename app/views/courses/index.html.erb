@@ -2,8 +2,8 @@
 
 <h1>Courses</h1>
 
-<table>
-  <thead>
+<table class="table table-bordered table-sm">
+  <thead class="thead-dark">
     <tr>
       <th>Name</th>
       <th>Number</th>
@@ -22,15 +22,21 @@
       </tr>
     <% end %>
   </tbody>
-  <h3>Import Data</h3>
-  <%=form_tag import_courses_path, multipart: true do %>
-    <%= file_field_tag :file %>
-    <%= submit_tag "import CSV" %>
-  <%end %>
+
 </table>
+<%= link_to_unless_current 'New Course', new_course_path %>
+
+
+<br>
+
+<br>
+<h3>Import Data</h3>
+<%=form_tag import_courses_path, multipart: true do %>
+  <%= file_field_tag :file %>
+  <%= submit_tag "import CSV" %>
+<%end %>
 
 <%= link_to 'CSV Upload format', "/CourseTemplate3.csv", :target => "_blank" %>
 
 <br>
 
-<%= link_to 'New Course', new_course_path %>

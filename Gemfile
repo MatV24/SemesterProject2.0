@@ -21,6 +21,9 @@ gem 'coffee-rails', '~> 4.2'
 gem 'turbolinks', '~> 5'
 # Build JSON APIs with ease. Read more: https://github.com/rails/jbuilder
 gem 'jbuilder', '~> 2.5'
+
+gem 'clearance', '~>1.15.1'
+
 # Use Redis adapter to run Action Cable in production
 # gem 'redis', '~> 4.0'
 # Use ActiveModel has_secure_password
@@ -31,7 +34,14 @@ gem 'jquery-rails'
 # Use Capistrano for deployment
 # gem 'capistrano-rails', group: :development
 # Reduces boot times through caching; required in config/boot.rb
-gem 'bootsnap', '>= 1.1.0', require: false
+gem 'coffee-script-source','1.8.0'
+gem 'bootstrap'
+#jquery
+#popper
+gem 'popper_js'
+#tether
+gem 'tether-rails'
+gem 'execjs', '~> 2.2.2'
 
 group :development, :test do
   # Call 'byebug' anywhere in the code to stop execution and get a debugger console
@@ -42,6 +52,7 @@ group :development do
   # Access an interactive console on exception pages or by calling 'console' anywhere in the code.
   gem 'web-console', '>= 3.3.0'
 end
+gem 'bootsnap', '>= 1.1.0', require: false
 
 group :test do
   # Adds support for Capybara system testing and selenium driver

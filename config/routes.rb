@@ -3,6 +3,9 @@ Rails.application.routes.draw do
   resources :coursefaculties
   resources :coursecriterions
   resources :criterions
+
+  root to: "welcomecontroller#show"
+
   resources :faculties do
     collection {post :import }
   end

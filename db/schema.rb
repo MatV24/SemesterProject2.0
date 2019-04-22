@@ -10,7 +10,7 @@
 #
 # It's strongly recommended that you check this file into your version control system.
 
-ActiveRecord::Schema.define(version: 2019_04_22_044917) do
+ActiveRecord::Schema.define(version: 2019_04_22_080314) do
 
   create_table "coursecriterions", force: :cascade do |t|
     t.integer "Exceed"
@@ -65,6 +65,16 @@ ActiveRecord::Schema.define(version: 2019_04_22_044917) do
     t.string "Phone"
     t.datetime "created_at", null: false
     t.datetime "updated_at", null: false
+  end
+
+  create_table "reports", force: :cascade do |t|
+    t.integer "max"
+    t.integer "min"
+    t.integer "mean"
+    t.integer "courseevaluation_id"
+    t.datetime "created_at", null: false
+    t.datetime "updated_at", null: false
+    t.index ["courseevaluation_id"], name: "index_reports_on_courseevaluation_id"
   end
 
   create_table "users", force: :cascade do |t|

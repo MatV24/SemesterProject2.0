@@ -1,10 +1,10 @@
 <p id="notice"><%= notice %></p>
 
-<h1>Courseevaluations</h1>
-<table class="table table-bordered table-sm">
+<h1>Course Evaluations</h1>
+<table class="table table-bordered table-sm, table table-striped">
   <thead class="thead-dark">
     <tr>
-      <th>Criteriathreshold</th>
+      <th>Criteria Threshold</th>
       <th>Course</th>
       <th>Faculty</th>
       <th>Criterion</th>
@@ -15,10 +15,10 @@
   <tbody>
     <% @courseevaluations.each do |courseevaluation| %>
       <tr>
-        <td><%= courseevaluation.criteriathreshold %></td>
         <td><%= courseevaluation.course.Number %> <%=courseevaluation.course.Name %></td>
         <td><%= courseevaluation.faculty.Firstname %>, <%=courseevaluation.faculty.Lastname %></td>
         <td><%= courseevaluation.criterion.Title %></td>
+        <td><%= courseevaluation.criteriathreshold %></td>
         <td><%= link_to 'Show', courseevaluation %></td>
         <td><%= link_to 'Edit', edit_courseevaluation_path(courseevaluation) %></td>
         <td><%= link_to 'Destroy', courseevaluation, method: :delete, data: { confirm: 'Are you sure?' } %></td>
@@ -29,4 +29,4 @@
 
 <br>
 
-<%= link_to 'New Courseevaluation', new_courseevaluation_path %>
+<%= link_to 'New Course Evaluation', new_courseevaluation_path %>

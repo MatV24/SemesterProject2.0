@@ -3,9 +3,9 @@
 
 <p id="notice"><%= notice %></p>
 
-<h1>Coursefaculties</h1>
+<h1>Course Faculties</h1>
 
-  <table class="table table-bordered table-sm">
+  <table class="table table-bordered table-sm, table table-striped">
     <thead class="thead-dark">
     <tr>
       <th>Course</th>
@@ -17,7 +17,7 @@
   <tbody>
     <% @coursefaculties.each do |coursefaculty| %>
         <td><%= coursefaculty.course.Number %></td>
-        <td><%= coursefaculty.faculty.Lastname %>, <%=coursefaculty.faculty.Firstname %></td>
+        <td><%= coursefaculty.faculty.full_name%>
         <td><%= link_to 'Show', coursefaculty %></td>
         <td><%= link_to 'Edit', edit_coursefaculty_path(coursefaculty) %></td>
         <td><%= link_to 'Destroy', coursefaculty, method: :delete, data: { confirm: 'Are you sure?' } %></td>
@@ -28,5 +28,5 @@
 
 <br>
 
-<%= link_to 'New Coursefaculty', new_coursefaculty_path %>
+<%= link_to 'New Course Faculty', new_coursefaculty_path %>
 </div>

@@ -1,0 +1,35 @@
+<p id="notice"><%= notice %></p>
+
+<h1>Coursecriterions</h1>
+
+<table class="table table-bordered table-sm">
+  <thead class="thead-dark">
+    <tr>
+      <th>Course</th>
+      <th>Criteria</th>
+      <th>Exceed</th>
+      <th>Accept</th>
+      <th>Poor</th>
+      <th colspan="3"></th>
+    </tr>
+  </thead>
+
+  <tbody>
+    <% @coursecriterions.each do |coursecriterion| %>
+      <tr>
+        <td><%= coursecriterion.course.Name %></td>
+        <td><%= coursecriterion.criterion.Title %></td>
+        <td><%= coursecriterion.Exceed %></td>
+        <td><%= coursecriterion.Accept %></td>
+        <td><%= coursecriterion.Poor %></td>
+        <td><%= link_to 'Show', coursecriterion %></td>
+        <td><%= link_to 'Edit', edit_coursecriterion_path(coursecriterion) %></td>
+        <td><%= link_to 'Destroy', coursecriterion, method: :delete, data: { confirm: 'Are you sure?' } %></td>
+      </tr>
+    <% end %>
+  </tbody>
+</table>
+
+<br>
+
+<%= link_to 'New Course Criterion', new_coursecriterion_path %>

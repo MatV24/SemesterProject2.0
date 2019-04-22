@@ -1,0 +1,30 @@
+<p id="notice"><%= notice %></p>
+
+<p>
+  <strong>Course Number:</strong>
+  <%= @coursecriterion.course.Number %>
+</p>
+
+<p>
+  <strong>Criteria Name:</strong>
+  <%= @coursecriterion.criterion.Title %>
+</p>
+
+
+<p>
+  <strong>Exceed:</strong>
+  <%= @coursecriterion.Exceed %>
+</p>
+
+<p>
+  <strong>Accept:</strong>
+  <%= @coursecriterion.Accept %>
+</p>
+
+<p>
+  <strong>Poor:</strong>
+  <%= @coursecriterion.Poor %>
+</p>
+
+<%= link_to 'Edit', edit_coursecriterion_path(@coursecriterion) %> |
+<%= link_to 'Back', coursecriterions_path %>

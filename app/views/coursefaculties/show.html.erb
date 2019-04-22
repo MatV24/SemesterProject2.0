@@ -1,0 +1,14 @@
+<p id="notice"><%= notice %></p>
+
+<p>
+  <strong>Course:</strong>
+  <%= @coursefaculty.course.Number %>
+</p>
+
+<p>
+  <strong>Faculty:</strong>
+  <%= @coursefaculty.faculty.Lastname %>, <%= @coursefaculty.faculty.Firstname %>
+</p>
+
+<%= link_to 'Edit', edit_coursefaculty_path(@coursefaculty) %> |
+<%= link_to 'Back', coursefaculties_path %>

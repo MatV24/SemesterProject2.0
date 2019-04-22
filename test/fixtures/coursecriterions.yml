@@ -1,0 +1,11 @@
+# Read about fixtures at http://api.rubyonrails.org/classes/ActiveRecord/FixtureSet.html
+
+one:
+  Exceed: 1
+  Accept: 1
+  Poor: 1
+
+two:
+  Exceed: 1
+  Accept: 1
+  Poor: 1

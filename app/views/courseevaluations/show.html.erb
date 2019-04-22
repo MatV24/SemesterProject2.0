@@ -1,0 +1,24 @@
+<p id="notice"><%= notice %></p>
+
+<p>
+  <strong>Criteriathreshold:</strong>
+  <%= @courseevaluation.criteriathreshold %>
+</p>
+
+<p>
+  <strong>Course:</strong>
+  <%= @courseevaluation.course.Number %>
+</p>
+
+<p>
+  <strong>Faculty:</strong>
+  <%= @courseevaluation.faculty.Firstname %>,<%=@courseevaluation.faculty.Lastname %>
+</p>
+
+<p>
+  <strong>Criterion:</strong>
+  <%= @courseevaluation.criterion.Title %>
+</p>
+
+<%= link_to 'Edit', edit_courseevaluation_path(@courseevaluation) %> |
+<%= link_to 'Back', courseevaluations_path %>

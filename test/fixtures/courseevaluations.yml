@@ -1,0 +1,13 @@
+# Read about fixtures at http://api.rubyonrails.org/classes/ActiveRecord/FixtureSet.html
+
+one:
+  criteriathreshold: 
+  course: one
+  faculty: one
+  criterion: one
+
+two:
+  criteriathreshold: 
+  course: two
+  faculty: two
+  criterion: two
